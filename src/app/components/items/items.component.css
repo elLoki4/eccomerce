@@ -1,0 +1,81 @@
+
+.producto {
+  display: flex;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  margin: 20px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  transition:
+    border-color 0.3s,
+    box-shadow 0.3s;
+}
+
+.producto:hover {
+  border-color: #e55d00;
+  box-shadow: 0px 0px 15px rgba(255, 102, 0, 0.5);
+}
+
+/* Estilos para la imagen del producto */
+.imagen-producto {
+  max-width: 25%; /* La imagen se adaptará al ancho del contenedor */
+  height: auto;
+  margin-right: 20px;
+}
+
+/* Estilos para el contenido de la tarjeta de producto */
+.producto .info {
+  flex-grow: 1;
+}
+
+.producto h2 {
+  color: black;
+  font-size: 24px;
+  margin: 0;
+}
+
+.producto .descripcion {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #666;
+}
+
+.producto .precio {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+}
+
+.producto .boton-comprar {
+  background-color: #ff6600;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 18px;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.producto .boton-comprar:hover {
+  background-color: #e55d00;
+}
+
+/* Estilos para dispositivos móviles usando media queries */
+@media screen and (max-width: 768px) {
+  .producto {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .producto:hover {
+    border-color: #e55d00;
+    box-shadow: none;
+  }
+
+  .imagen-producto {
+    max-width: 100%; /* La imagen se adapta al ancho del contenedor en dispositivos móviles */
+    margin-right: 0;
+  }
+}

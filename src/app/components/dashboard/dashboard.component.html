@@ -1,0 +1,17 @@
+<div class="container text-center">
+  <div class="row">
+    <div class="col-12 pt-1 col-sm-4" *ngFor="let data of listProduct" >
+      <div class="card">
+        <img [routerLink]="['/items',data.id]" src="{{data.image}}" alt="{{data.title}}">
+        <div class="card-details">
+          <h3>{{data.image }}</h3>
+          <p>Precio: ${{data.results.image}}</p>
+          <button  [routerLink]="['/items',data.id]" class="btn btn-primary ps-2">Comprar</button>
+          <button  [routerLink]="['/items',data.id]" class="btn btn-primary">Información</button>
+          </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+

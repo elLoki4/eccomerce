@@ -1,0 +1,30 @@
+<mat-card>
+  <mat-card-content>
+  
+  
+  <div class="example-sidenav-content">
+    <span  mat-button (click)="drawer.toggle()">
+      <mat-icon class="icon" aria-hidden="false" aria-label="Example home icon" fontIcon="menu"></mat-icon>
+    </span>
+    <h1>ecommerce</h1>
+    <div class="buscar">
+      <input type="text" class="buscador" #buscartexto (keyup.enter)="buscartxt(buscartexto.value)">
+      <button (click)="buscartxt(buscartexto.value)" class="btn btn-outline-light">buscar</button> 
+ </div>
+  </div>
+  
+  
+  </mat-card-content>
+</mat-card>
+
+
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <p>Auto-resizing sidenav</p>
+    
+  </mat-drawer>
+  <router-outlet>
+  </router-outlet>
+</mat-drawer-container>
+
+
